@@ -28,7 +28,7 @@ body {
    justify-content:start;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    font-size: 18px;
-   margin-left: 15%;
+   /* margin-left: 15%; */
 }
 .dropdown1,
 .dropdown2,
@@ -64,13 +64,15 @@ body {
 .topdiv4{
    display: flex;
    flex-direction: row;
-   justify-content: end;
+   justify-content: flex-end;
    margin-top: -2%;
    color:black;
    font-size: 18px;
-   
+   padding: 4px;
+   align-items: center;
+
 }
-.topdiv2{
+/* .topdiv2{
    padding-right: 20%;
 }
 .topdiv3{
@@ -79,7 +81,7 @@ body {
 }
 .topdiv4{
    margin-top: -1.3%;
-}
+} */
 .topdiv2:hover,
 .topdiv3:hover,
 .topdiv4:hover
@@ -285,7 +287,51 @@ transition: transform 0.3s ease-in-out;
    .pricing3,
    .pricing4 {
        width: 90%;
-       margin-bottom: 20px; /* Add spacing between pricing boxes */
+       margin-bottom: 20px; 
    }
 }
 
+ .topdiv {
+   display: flex;
+   justify-content: space-between; /* Horizontally distribute elements */
+   align-items: center; /* Vertically align elements */
+ }
+
+ .topdiv2,
+ .topdiv3,
+ .topdiv4 {
+   justify-self: flex-end; 
+   margin-right: 10px; 
+   margin-top: 4px;
+ }
+ .topdiv {
+   display: flex;
+   align-items: center; /* Vertically align elements */
+ }
+ 
+ .topdiv img {
+   margin-right: 0; /* Remove right margin from image */
+ }
+ 
+ .header {
+   margin-left: -10%; /* Remove left margin from OpenAI text */
+ }
+ 
+ /* Additional customization (optional) */
+ .topdiv {
+   gap: none; /* Add a small gap between picture and OpenAI text (optional) */
+ }
+ 
+ 
+ @media only screen and (max-width: 768px) {
+   .topdiv > *:not(.topdiv) {
+     display: none;
+   }
+ }
+ 
+ @media only screen and (min-width: 769px) {
+   .topdiv > *:not(.topdiv) {
+     display: block;
+   }
+ }
+ 
