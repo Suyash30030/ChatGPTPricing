@@ -290,6 +290,12 @@ transition: transform 0.3s ease-in-out;
        margin-bottom: 20px; 
    }
 }
+.convert-button{
+   transition:transform;
+}
+.convert-button:hover{
+   transform:scale(.95);
+}
 
  .topdiv {
    display: flex;
